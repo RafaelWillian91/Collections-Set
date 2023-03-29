@@ -37,13 +37,15 @@ public class AccountOrderComparator implements Comparable<AccountOrderComparator
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AccountOrderComparator that = (AccountOrderComparator) o;
-        return Double.compare(that.balance, balance) == 0 && Objects.equals(number, that.number);
+        return Objects.equals(number, that.number);
     }
 
     //HashCode está muito ligado ao equals. Quando implementa um implementa o outro
+
+
     @Override
     public int hashCode() {
-        return Objects.hash(number, balance);
+        return Objects.hash(number);
     }
 
     @Override

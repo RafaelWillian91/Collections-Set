@@ -31,6 +31,7 @@ public class Setapp5 {
         treeset2.add(new AccountOrderComparator("1423", 3000));
         treeset2.add(new AccountOrderComparator("121", 5000));
         treeset2.add(new AccountOrderComparator("352", 1500));
+        treeset2.add(new AccountOrderComparator("3502", 1000));
 
         for (AccountOrderComparator accountOrderComparator : treeset2) {
 
