@@ -1,3 +1,5 @@
+package setAdicionandoElemetos;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -29,6 +31,7 @@ public class Setapp1 {
         //Set não duplica elementros
         set2.add("U");
         set2.add("U");
+        //Ele não adiciona pq a Classe String já implementou equals e HashCode
 
         for(String s1 : set2){
             System.out.println(s1);
