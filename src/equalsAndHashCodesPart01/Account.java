@@ -29,6 +29,8 @@ public class Account {
     }
 
     //Equals e HashCode ensinam o java que ele deve comparar a igualdade dentro de cada elemento.
+    //O equals tem que considerar os atributos de igualdade que voce deseja comparar
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -37,8 +39,12 @@ public class Account {
         return Double.compare(account.balance, balance) == 0 && Objects.equals(number, account.number);
     }
 
+    //HashCode está muito ligado ao equals. Quando implementa um implementa o outro
     @Override
     public int hashCode() {
         return Objects.hash(number, balance);
     }
+    //Em HashCode não pode colocar numeros randomicos no retorno, pq o java vai adicionar em baldes diferentes
+    //Então o set vai acabar permitindo elementos duplicados.
+    //Vira um comportamento imprevisível. é melhor usar return Objects.hash(number, balance);
 }
